@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # cpycal
-# 
+#
 # GNU Public License version 3 - See http://www.gnu.org/licenses/licenses.html
-# 
+#
 # (c) Fabio Celsalonga
 #
 # a compact calendar from command line useful for geektool 
@@ -47,14 +47,14 @@ highline = '''\033[44;37;33m''' # evidenziato
 # holydays list, default Italian; you can adjust this to your needs
 h_list = ['01-01', '06-01', '25-04', '01-05', '02-06', '15-08', '01-11', '08-12', '25-12', '26-12']
 
-numm=4 # total number of month processed
-now=time.localtime()
-cury=now[0] if now[1]>1 else now[0]-1  
-curm=now[1]-1 if now[1]>1 else 12
-curw=datetime.date(now[0], now[1], now[2]).isocalendar()[1]
-ddw=1
+numm = 4 # total number of month processed
+now = time.localtime()
+cury = now[0] if now[1] > 1 else now[0] -1
+curm = now[1]-1 if now[1] > 1 else 12
+curw = datetime.date(now[0], now[1], now[2]).isocalendar()[1]
+ddw = 1
 
-for i in range(numm,0,-1):
+for i in range(numm, 0, -1):
     kw=datetime.date(cury, curm, ddw).isocalendar()[1]
     wdheader = calendar.weekheader(2)
     listday = wdheader.split(' ')
@@ -68,7 +68,7 @@ for i in range(numm,0,-1):
         if listday[itemlday]=="Do":
             listday[itemlday] = bredline + listday[itemlday] + nrmlline
         
-    print calendar.month_name[curm],cury,"\nW |",listday[0],listday[1],listday[2],listday[3],listday[4],listday[5],listday[6]
+    print (calendar.month_name[curm],cury,"\nW |",listday[0],listday[1],listday[2],listday[3],listday[4],listday[5],listday[6])
     
     m = calendar.monthcalendar(cury,curm)
     for l in m:
