@@ -91,7 +91,7 @@ for i in range(numm, 0, -1):
             if d > 1 and d < 31 and datetime.date(cury, curm, d).isocalendar()[2] == 4: 
                 ddw = d
                 
-        print line
+        print (line)
                 
         # calcolo esattamente quale sara' la prossima settimana 
         # perche' se mi limito ad incrementare kw di 1 (kw +=1) al cambio di anno ho problemi...
@@ -108,4 +108,4 @@ for i in range(numm, 0, -1):
         cury += 1
         ddw = 1
     if i>1:
-        print
+        print()
