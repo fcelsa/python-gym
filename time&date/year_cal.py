@@ -1,18 +1,20 @@
-#!/usr/bin/python
-# year_cal
-#
-# GNU Public License version 3 - See http://www.gnu.org/licenses/licenses.html
-#
-# (c) Fabio Celsalonga
-#
-# un compatto calendario, ideale per essere utilizzato con tool tipo GeekTool
-# visualizza il mese precedente al corrente e quelli successivi, per il totale
-# impostato da numm
-#
-# 
-# Changelog:
-# Ver. 1.2 2015-10-28 fix some issue on year change
-# Ver. 1.3 2019-04-24 code refactoring for PEP8 compliant 
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+"""
+year_cal.py
+
+Copyright (c) 2019 Fabio Celsalonga
+MIT License
+
+un compatto calendario, ideale per essere utilizzato con tool tipo GeekTool
+visualizza il mese precedente al corrente e quelli successivi, per il totale
+impostato da numm
+
+Changelog:
+Ver. 1.3 2019-04-24 code refactoring for PEP8 compliant
+Ver. 1.2 2015-10-28 fix some issue on year change
+"""
 
 import calendar
 import datetime
@@ -29,7 +31,7 @@ ddw = 1  # always set 1st day of month to calc weeks numbers.
 
 for i in range(numm, 0, -1):
     kw = datetime.date(curj, curm, ddw).isocalendar()[1]
-    print calendar.month_name[curm], curj, "\nW |", calendar.weekheader(2)
+    print(calendar.month_name[curm], curj, "\nW |", calendar.weekheader(2))
     m = calendar.monthcalendar(curj, curm)
     for l in m:
         line = '{:2d}|'.format(kw)
@@ -44,7 +46,7 @@ for i in range(numm, 0, -1):
                     datetime.date(curj, curm, d).isocalendar()[2] == 4):
                 ddw = d
 
-        print line
+        print(line)
 
         # calcolo quale sara' la prossima settimana perche' se mi limito ad
         # incrementare kw di 1 (kw +=1) al cambio di anno ho problemi...
@@ -59,4 +61,4 @@ for i in range(numm, 0, -1):
         curj += 1
         ddw = 1
     if i > 1:
-        print
+        print()
