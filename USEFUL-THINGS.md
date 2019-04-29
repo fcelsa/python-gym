@@ -61,10 +61,11 @@ A few example of base header and skeleton that I use:
 
 """
 name_of_module.py: Description of what the module does, and other useful things
-"""
 
-__author__ = "Fabio Celsalonga"
-__email__ = "fabio.celsa@gmail.com"
+Copyright (c) 2019 Fabio Celsalonga
+MIT License
+
+"""
 
 # Imports
 import sys
@@ -88,3 +89,5 @@ if __name__ == '__main__':
     main()
 
 ```
+
+See also on template directory to use other start project file.
