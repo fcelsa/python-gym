@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 
 """
-scheleton.py: basic python script scheleton
+template.py: basic python script skeleton
 
-Copyright (c) 2019 Fabio Celsalonga
+Copyright (c) 2019-2022 Fabio Celsalonga
 MIT License
 
 """
@@ -24,7 +24,7 @@ from datetime import datetime
 # Local modules * esempio per definizione delle costanti.
 from constants import Constants
 
-__appname__ = "scheleton"
+__appname__ = "name of the script or application"
 __version__ = "1.0.0"
 
 logger = logging.getLogger(__appname__)
@@ -32,7 +32,7 @@ logger = logging.getLogger(__appname__)
 
 def main(args):
     # TODO: Do something more interesting here...
-    print('Hello world! from script scheleton')
+    print('Hello world! from script template!')
 
 
 def setup_logger(args):

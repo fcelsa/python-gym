@@ -3,7 +3,11 @@
 
 collection of useful Python script, my path to mastering Python
 
-[Useful tips & tricks, setup, templete and other things](USEFUL-THINGS.md)
+[Useful tips & tricks, setup, template and other things](USEFUL-THINGS.md)
+
+## template
+- Useful template and skeleton source code to start a script, little project or big project...
+
 
 ## list of module
 
